@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decoding 5G — WebQuest</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Nunito', sans-serif; background: #f5f7fa; color: #333; }
+
+  header {
+    background: #1a3a5c;
+    color: white;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+  header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+  header p { font-size: 1rem; opacity: 0.85; }
+  header .info { margin-top: 1.25rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+  header .info span { font-size: 0.85rem; background: rgba(255,255,255,0.15); padding: 4px 14px; border-radius: 20px; }
+
+  nav {
+    background: #15304d;
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 0;
+  }
+  nav a {
+    color: #cde; text-decoration: none; padding: 0.75rem 1.25rem;
+    font-size: 0.88rem; font-weight: 600; transition: background 0.2s;
+  }
+  nav a:hover { background: rgba(255,255,255,0.1); }
+
+  .container { max-width: 820px; margin: 0 auto; padding: 0 1.25rem 3rem; }
+
+  .section {
+    background: white; border-radius: 10px;
+    margin-top: 2rem; overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+  .section-header {
+    background: #1a3a5c; color: white;
+    padding: 0.9rem 1.5rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-header h2 { font-size: 1.1rem; font-weight: 700; }
+  .section-header .num {
+    background: rgba(255,255,255,0.2);
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; font-weight: 700; flex-shrink: 0;
+  }
+  .section-body { padding: 1.5rem; }
+  .section-body p { font-size: 0.95rem; line-height: 1.75; color: #444; margin-bottom: 0.75rem; }
+  .section-body p:last-child { margin-bottom: 0; }
+
+  .destaque {
+    background: #eef4fb; border-left: 4px solid #1a3a5c;
+    border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; margin: 1rem 0;
+  }
+  .destaque strong { color: #1a3a5c; display: block; margin-bottom: 0.4rem; font-size: 0.95rem; }
+  .destaque p { margin: 0; font-size: 0.9rem; }
+
+  .etapas { display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem; }
+  .etapa { display: flex; gap: 1rem; align-items: flex-start; }
+  .etapa-num {
+    min-width: 34px; height: 34px; border-radius: 50%;
+    background: #1a3a5c; color: white;
+    font-weight: 700; font-size: 0.9rem;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .etapa-content h3 { font-size: 0.95rem; font-weight: 700; color: #1a3a5c; margin-bottom: 4px; }
+  .etapa-content p { font-size: 0.9rem; color: #555; line-height: 1.65; margin: 0; }
+
+  .recursos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin-top: 0.75rem; }
+  .recurso {
+    border: 1px solid #dde4ee; border-radius: 8px; padding: 0.9rem 1rem;
+    background: #fafbfd;
+  }
+  .recurso h3 { font-size: 0.9rem; font-weight: 700; color: #1a3a5c; margin-bottom: 4px; }
+  .recurso p { font-size: 0.82rem; color: #666; line-height: 1.5; margin: 0 0 6px; }
+  .recurso a { font-size: 0.78rem; color: #2a6ab5; text-decoration: none; }
+  .recurso a:hover { text-decoration: underline; }
+
+  footer {
+    text-align: center; padding: 1.5rem;
+    font-size: 0.8rem; color: #999;
+    border-top: 1px solid #e8edf3; margin-top: 2rem;
+  }
+
+  @media (max-width: 560px) {
+    header h1 { font-size: 1.4rem; }
+    nav a { padding: 0.6rem 0.75rem; font-size: 0.8rem; }
+    .recursos-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Decoding 5G</h1>
+  <p>Navegando por padrões e documentações técnicas em inglês</p>
+  <div class="info">
+    <span>Inglês Instrumental</span>
+    <span>Ciência da Computação — UFG</span>
+    <span>Atividade individual</span>
+  </div>
+</header>
+
+<nav>
+  <a href="#introducao">Introdução</a>
+  <a href="#tarefa">Tarefa</a>
+  <a href="#processo">Processo</a>
+  <a href="#recursos">Recursos</a>
+  <a href="#avaliacao">Avaliação</a>
+  <a href="#conclusao">Conclusão</a>
+</nav>
+
+<div class="container">
+
+  <div class="section" id="introducao">
+    <div class="section-header">
+      <div class="num">1</div>
+      <h2>Introdução</h2>
+    </div>
+    <div class="section-body">
+      <p>As redes 5G estão transformando a comunicação global — e toda a documentação que define seus padrões, protocolos e ferramentas de simulação está escrita em inglês. Documentos do 3GPP, especificações técnicas da ITU, tutoriais do Sionna e artigos científicos publicados em periódicos internacionais são fontes essenciais para qualquer profissional da área de redes e telecomunicações.</p>
+      <p>Nesta WebQuest, você vai desenvolver a habilidade de ler, interpretar e extrair informações de textos técnicos em inglês sobre redes 5G — uma competência indispensável na sua formação como cientista da computação. Ao final, você terá produzido um material de apoio real que poderá usar durante toda a sua vida acadêmica e profissional.</p>
+    </div>
+  </div>
+
+  <div class="section" id="tarefa">
+    <div class="section-header">
+      <div class="num">2</div>
+      <h2>Tarefa</h2>
+    </div>
+    <div class="section-body">
+      <p>Você vai explorar documentações técnicas em inglês sobre redes 5G e criar um <strong>Guia de Leitura Técnica em 5G</strong> — um produto digital bilíngue (EN → PT-BR) que ajude estudantes de Computação a interpretar textos técnicos da área de redes e telecomunicações.</p>
+      <div class="destaque">
+        <strong>Produto final: Guia de Leitura Técnica em 5G</strong>
+        <p>Uma página web (Google Sites, Notion ou HTML) com as seguintes seções: glossário temático EN→PT-BR com ao menos 25 termos, trechos de documentações reais comentados em português, estratégias de leitura para textos técnicos e um mapa visual de termos do 5G.</p>
+      </div>
+      <p>O guia deve ser pensado para um colega de curso que nunca leu uma documentação técnica em inglês — clareza e organização são essenciais.</p>
+    </div>
+  </div>
+
+  <div class="section" id="processo">
+    <div class="section-header">
+      <div class="num">3</div>
+      <h2>Processo</h2>
+    </div>
+    <div class="section-body">
+      <p>Siga as etapas abaixo em ordem. Cada uma alimenta diretamente o seu produto final.</p>
+      <div class="etapas">
+        <div class="etapa">
+          <div class="etapa-num">1</div>
+          <div class="etapa-content">
+            <h3>Exploração de documentações</h3>
+            <p>Acesse ao menos 3 fontes técnicas em inglês sobre 5G (veja a seção de Recursos). Explore uma especificação 3GPP, um tutorial do Sionna e um artigo do IEEE. Anote suas primeiras impressões sobre o vocabulário e a estrutura dos textos.</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-num">2</div>
+          <div class="etapa-content">
+            <h3>Levantamento de vocabulário técnico</h3>
+            <p>Identifique ao menos 25 termos técnicos em inglês. Para cada um, registre: o termo, um trecho original onde ele aparece, a tradução técnica em PT-BR e a categoria (ex: modulação, antenas, protocolos, simulação).</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-num">3</div>
+          <div class="etapa-content">
+            <h3>Análise de trechos técnicos</h3>
+            <p>Escolha 3 trechos de documentações diferentes — um do 3GPP, um do Sionna e um artigo científico. Para cada trecho, escreva um resumo em português, destaque o vocabulário-chave e explique como você compreendeu o texto.</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-num">4</div>
+          <div class="etapa-content">
+            <h3>Criação do guia digital</h3>
+            <p>Monte o Guia de Leitura na plataforma de sua escolha. Organize as seções: Glossário, Trechos Comentados, Estratégias de Leitura e Mapa Visual de Termos. Garanta uma navegação clara e um visual agradável.</p>
+          </div>
+        </div>
+        <div class="etapa">
+          <div class="etapa-num">5</div>
+          <div class="etapa-content">
+            <h3>Apresentação em vídeo</h3>
+            <p>Grave um vídeo de 3 a 5 minutos em português apresentando seu guia: mostre como usá-lo, explique suas escolhas e compartilhe o que aprendeu sobre leitura de inglês técnico durante o processo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="recursos">
+    <div class="section-header">
+      <div class="num">4</div>
+      <h2>Recursos</h2>
+    </div>
+    <div class="section-body">
+      <p>Utilize os links abaixo como ponto de partida para sua pesquisa. Você pode buscar fontes adicionais durante a exploração.</p>
+      <div class="recursos-grid">
+        <div class="recurso">
+          <h3>3GPP Specifications</h3>
+          <p>Especificações oficiais do padrão 5G NR, incluindo TR 38.901 e TS 38.211.</p>
+          <a href="https://www.3gpp.org/specifications" target="_blank">3gpp.org/specifications</a>
+        </div>
+        <div class="recurso">
+          <h3>Sionna Documentation</h3>
+          <p>Documentação e tutoriais da biblioteca de simulação 5G/6G da NVIDIA.</p>
+          <a href="https://nvlabs.github.io/sionna" target="_blank">nvlabs.github.io/sionna</a>
+        </div>
+        <div class="recurso">
+          <h3>ITU-R IMT-2020</h3>
+          <p>Relatórios técnicos da UIT sobre requisitos e visão do 5G.</p>
+          <a href="https://www.itu.int/en/ITU-R/study-groups/rsg5/rwp5d/imt-2020/Pages/default.aspx" target="_blank">itu.int — IMT-2020</a>
+        </div>
+        <div class="recurso">
+          <h3>IEEE Xplore</h3>
+          <p>Artigos científicos sobre redes 5G, MIMO massivo, beamforming e alocação de recursos.</p>
+          <a href="https://ieeexplore.ieee.org" target="_blank">ieeexplore.ieee.org</a>
+        </div>
+        <div class="recurso">
+          <h3>Linguee / DeepL</h3>
+          <p>Tradução de termos técnicos em contexto real de uso em documentos profissionais.</p>
+          <a href="https://www.linguee.com.br" target="_blank">linguee.com.br</a>
+        </div>
+        <div class="recurso">
+          <h3>Cambridge Tech Dictionary</h3>
+          <p>Definições de vocabulário técnico em inglês com exemplos e pronúncia.</p>
+          <a href="https://dictionary.cambridge.org/topics/computers-and-technology/" target="_blank">dictionary.cambridge.org</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="avaliacao">
+    <div class="section-header">
+      <div class="num">5</div>
+      <h2>Avaliação</h2>
+    </div>
+    <div class="section-body">
+      <p>O produto final será avaliado considerando os seguintes aspectos:</p>
+      <div class="destaque">
+        <strong>Glossário técnico</strong>
+        <p>Ao menos 25 termos EN→PT-BR com contexto de uso real e categorização adequada.</p>
+      </div>
+      <div class="destaque">
+        <strong>Análise de trechos</strong>
+        <p>3 trechos comentados com clareza, precisão técnica e reflexão sobre as estratégias de leitura utilizadas.</p>
+      </div>
+      <div class="destaque">
+        <strong>Organização do guia</strong>
+        <p>Navegação clara, presença de todas as seções e coerência entre as partes do produto.</p>
+      </div>
+      <div class="destaque">
+        <strong>Criatividade e design</strong>
+        <p>Visual atrativo, boa legibilidade e usabilidade para o público-alvo — estudantes de TI.</p>
+      </div>
+      <div class="destaque">
+        <strong>Apresentação em vídeo</strong>
+        <p>Comunicação clara em português, boa demonstração do guia e reflexão genuína sobre o aprendizado.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="conclusao">
+    <div class="section-header">
+      <div class="num">6</div>
+      <h2>Conclusão</h2>
+    </div>
+    <div class="section-body">
+      <p>Ao concluir esta WebQuest, você terá desenvolvido uma habilidade essencial para a sua carreira: a capacidade de ler, interpretar e extrair conhecimento de documentações técnicas em inglês sobre redes 5G.</p>
+      <p>O Guia de Leitura que você produziu será um material de apoio real — seu e de colegas — para enfrentar com mais segurança os textos técnicos do dia a dia de quem trabalha com redes e telecomunicações. Especificações 3GPP, tutoriais do Sionna e artigos do IEEE deixarão de ser barreiras e passarão a ser fontes acessíveis para a sua pesquisa e desenvolvimento profissional.</p>
+      <p>Boa sorte e bons estudos!</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  WebQuest — Decoding 5G · Inglês Instrumental · Instituto de Informática · UFG
+</footer>
+
+</body>
+</html>
